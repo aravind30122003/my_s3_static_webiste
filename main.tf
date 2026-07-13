@@ -46,8 +46,9 @@ resource "aws_s3_object" "error" {
   content_type = "text/html"
 }
 
-resource "aws_s3_bucket_website_configuration" "website" {
+resource "aws_s3_bucket_website_configuration" "mybucket" {
   bucket = aws_s3_bucket.mybucket.id
+  
   index_document {
     suffix = "index.html"
   }
